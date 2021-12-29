@@ -1,10 +1,10 @@
 // Copyright (c) 2016 hrobeers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-
-// Running this file patches bitcore-lib to work on the peercoin blockchain.
-// * Sets peercoin as the default network.
-// * Patches bitcore-lib.Transaction to include peercoin's timestamp.
+// Updated for Pandacoin 2021 jommy99  John Moore
+// Running this file patches bitcore-lib to work on the pandacoin blockchain.
+// * Sets pandacoin as the default network.
+// * Patches bitcore-lib.Transaction to include pandacoin's timestamp.
 
 'use strict';
 
@@ -15,8 +15,8 @@ var bitcore = require('bitcore-lib');
 //
 
 bitcore.Networks.add({
-    name: 'peercoin',
-    alias: 'ppcoin',
+    name: 'pandacoin',
+    alias: 'pndcoin',
     pubkeyhash: 0x37,
     privatekey: 0xb7,
     scripthash: 0x75,
@@ -34,7 +34,7 @@ bitcore.Networks.add({
     xprivkey: 0x04358394,
   });
 
-bitcore.Networks.defaultNetwork = bitcore.Networks.get('peercoin');
+bitcore.Networks.defaultNetwork = bitcore.Networks.get('pandacoin');
 
 
 //
